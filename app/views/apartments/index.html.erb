@@ -1,6 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+<h2 style="color: blue">Welcome! You are signed is as <%= current_user.email%></h2>
+
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<!-- 🙄 -->
+
+<br/>
+
 <h1>Apartments</h1>
+
+<br />
+
+<form action="address_search" method="get">
+    <input type="text" name="address_search" placeholder="Search by Address">
+    <input type="submit" name="" value="Search">
+    </form>
+
+<!-- <form class="" action="fuzzy_search" method="get">
+    <input type="text" name="fuzzy_address_search" placeholder="Search by Address">
+    <input type="submit" name="" value="Search fuzzy">
+</form> -->
+<br />
 
 <table>
   <thead>
