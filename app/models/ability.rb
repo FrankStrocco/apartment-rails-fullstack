@@ -11,7 +11,7 @@ class Ability
       elsif user.has_role? :building_manager
           can :manage, Apartment, user_id: user.id
       elsif user.has_role? :authorized_clients
-          can  :manage, Apartment, user_id: user.id
+          can :manage, Apartment, user_id: user.id
     #   elsif user.has_role? :unauthorized_client
     #       can :read, Apartment
       end

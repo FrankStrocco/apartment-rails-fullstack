@@ -1,0 +1,28 @@
+<h1 style="color: orange">Change a user's role!</h1>
+
+<table>
+  <thead>
+    <thead>
+      <tr>
+        <th>Email</th><th>Role</th>
+      </tr>
+    </thead>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+
+      <td>
+          <% if !user.has_role? :building_manager %>
+            <%= form_tag("/admin/" + user.id.to_s + "?role=building_manager", method: :PUT) do %>
+              <input type="submit" value="Make Manager"/>
+            <% end %>
+         <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br />
+<%= link_to 'Back', apartments_path %>
