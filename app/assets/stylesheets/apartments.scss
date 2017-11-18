@@ -1,3 +1,24 @@
-// Place all the styles related to the Apartments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.apt_list {
+    border: 4px solid;
+}
+
+tr {
+    font-size: 24px;
+}
+
+th {
+    border-bottom: 1px solid #ccffff;
+    background-color: #ccffff;
+    padding: 7px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ccffff;
+    border-right: 1px solid #ccffff;
+}
+
+* {
+    background-color: #00FFFF;
+    color: bold;
+}
